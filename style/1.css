@@ -1,0 +1,30 @@
+
+/*---header------*/
+.navbar .nav-link:hover{
+  border-bottom: 2px solid #0fa39c;
+  color: black;
+}
+
+/*---sản phẩm tái chế------*/
+.card {
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-15px); 
+}
+
+/*nhận xét */
+.review::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 40px; 
+    transform: translateX(-50%);
+    border-bottom: 2px solid #0fa39c;
+}
+
+.review-card:hover {
+    opacity: 1; 
+}

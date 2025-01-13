@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Lagom Việt Nam </title>
+        <meta charset="utf-8">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="style/1.css">
+    </head>
+    <body>
+    
+<!-- Header -->
+<header>
+  <div class="container py-4">
+      <div class="row">
+          <div class="col-md-3 py-3">
+              <img src="../image/logo.svg" alt="logo">
+          </div>
+          <div class="col-md-3 py-3"></div>
+          <div class="col-md-5 py-3">
+              <div class="input-group">
+                  <input type="text" class="form-control col-8 border rounded-0" placeholder="Tìm sản phẩm">
+                  <select class="form-select col-2 border rounded-0 ">
+                      <option value="default">Danh mục</option>
+                      <option value="sp">Hàng gia dụng</option>
+                      <option value="sp">HOME DECOR</option>
+                  </select>
+                  <button class="btn btn-outline-secondary border rounded-0" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>                   
+          </div>
+          <div class="col-md-1 d-flex align-items-center justify-content-center">
+              <a href="giohang.html" class="position-relative"> <i class="fa-solid fa-cart-shopping fa-lg text-secondary"></i> 
+                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info p-1 ">
+                    0
+                  </span>
+                </button>
+              </a>
+              <p class="text-secondary p-1 m-2">0₫</p>
+          </div>
+      </div>
+  </div>
+<section class="mainmenu border rounded-0">
+  <div class="container">
+      <nav class="navbar navbar-expand-sm justify-content-center">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link custom-hover" href="trangchu.html" onclick="setActive(this)">TRANG CHỦ</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link custom-hover dropdown-toggle" href="aboutus.html" onclick="setActive(this)" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                  GIỚI THIỆU
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <li><a class="dropdown-item" href="aboutus.html">Về Lagom Việt Nam</a></li>
+                  <li><a class="dropdown-item" href="quytrinhsanxuat.html">Quy trình sản xuất</a></li>
+                  <li><a class="dropdown-item" href="doitac.html">Thông tin dành cho đối tác</a></li>
+                  <li><a class="dropdown-item" href="tintuc.html">Tin tức, sự kiện</a></li>
+              </ul>
+          </li>
+            <li class="nav-item">
+              <a class="nav-link custom-hover" href="sanpham.html" onclick="setActive(this)">SẢN PHẨM</a>
+            </li>
+            <li class="nav-item custom-hover">
+              <a class="nav-link custom-hover" href="blog.html" onclick="setActive(this)">BLOG</a>
+            </li>
+          </ul>
+      </nav>
+  </div>
+</section>
+</header>
+<section class="side bg-light py-4">
+  <div class="container">
+      <h1 class="entry-title title text-center">CHÍNH SÁCH ĐỔI TRẢ, HOÀN TIỀN</h1>
+      <h6 class="text-center text-dark">
+        <a href="trangchu.html" class="text-dark text-decoration-none fs-6">TRANG CHỦ</a> / CHÍNH SÁCH ĐỔI TRẢ,HOÀN TIỀN
+      </h6>
+  </div>
+</section>
+<main>
+  <div class="container">
+    </br>  
+  <h6 class="policy-intro text-muted fs-6 m-2">
+      <i>
+        Bất cứ lỗi nào về chất lượng sản phẩm, hoặc hàng không đúng theo mô tả trên website, Lagom Việt Nam mong nhận phản hồi sớm nhất của quý khách để có cơ hội được giải đáp, hoặc đền bù thỏa đáng.
+        Thời gian phản hồi của Quý khách ngay lúc nhận hàng hoặc trong ngày sẽ giúp Lagom Việt Nam tìm kiếm nguyên nhân và biện pháp xử lý tốt nhất.
+        Để nhận được hỗ trợ ngay lập tức, Quý khách hãy liên lạc với số hotline: 0828180081 – 0968618769
+      </i>
+    </h6>
+
+    <section>
+      <div class="section-title">
+        <h6><strong>1. Các trường hợp có thể tiến hành đổi trả</strong></h6>
+      </div>
+      <div class="section-description">
+        <ul class="refund-policy-list">
+          <li>Sản phẩm không đúng quy cách như mô tả trên website.</li>
+          <li>Sản phẩm bị biến dạng.</li>
+          <li>Sản phẩm chưa sử dụng.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <h6><strong>2. Các trường hợp không đổi trả sản phẩm</strong></h6>
+      </div>
+      <div class="section-description">
+        <ul class="refund-policy-list">
+          <li>Sản phẩm đã qua sử dụng, hoặc quá 3 ngày kể từ ngày giao hàng thành công được báo qua cổng đơn vị vận chuyển Viettel Post.</li>
+          <li>Sản phẩm bị tháo tem, nhãn mác của nhà sản xuất.</li>
+          <li>Sản phẩm hư hỏng trong quá trình sử dụng do sai cách sử dụng và không theo lưu ý của nhà sản xuất.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <h6><strong>3. Chính sách hoàn tiền</strong></h6>
+      </div>
+      <div class="section-description">
+        <p>
+          Trong trường hợp Lagom Việt Nam gởi hàng thiếu, hoặc Quý khách chuyển khoản bị sai số tiền (nhiều hơn), chúng tôi cam kết sẽ hoàn tiền. Quý khách vui lòng cung cấp các thông tin sau:
+          <br>
+          <strong>Số tài khoản ngân hàng</strong>, <strong>Tên người thụ hưởng</strong>, <strong>Tên ngân hàng</strong>, <strong>Chi nhánh ngân hàng</strong>, và <strong>Số điện thoại</strong>.
+          <br>
+          Lagom Việt Nam sẽ tiến hành hoàn tiền chậm nhất trong vòng 2 ngày kể từ khi xác nhận hoàn tiền.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <h6><strong>4. Lời khuyên cho khách hàng</strong></h6>
+      </div>
+      <div class="section-description">
+        <p>
+          Quý khách vui lòng kiểm tra kỹ sản phẩm khi mua và nhận hàng để tránh những vấn đề phát sinh và có trải nghiệm mua hàng hài lòng nhất.
+        </p>
+      </div>
+    </section>
+  </div>
+</main>
+
+       <!-- Footer -->
+<footer class="footer">
+  <div class="container-fluid">
+    <div class="row" style="background-image: url('../image/background.jpg'); background-position:center center;background-repeat:no-repeat;background-size:cover; height: fit-content;">
+        <div class="col-md-4 py-3"></div>
+        <div class="col-md-3 py-5 ">
+            <h4 class="text-dark fs-3">FOLLOW LAGOM</h4> 
+            <p class="tex m-2 fs-6">Kết nối với Lagom bạn nhé!</p> 
+        </div>
+        <div class="col-md-3 pt-5">
+            <ul class="social d-flex align-items-center justify-content-center py-4">
+                <a href="https://www.facebook.com/lagomvietnam.org" 
+                   class="d-flex align-items-center justify-content-center bg-primary text-white text-decoration-none rounded-circle mx-2"
+                   style="width: 40px; height: 40px;">
+                    <i class="fa-brands fa-facebook-f fs-5"></i>
+                </a>
+                <a href="https://www.instagram.com/lagomvietnam2023/?hl=en" 
+                   class="d-flex align-items-center justify-content-center bg-danger text-white text-decoration-none rounded-circle mx-2"
+                   style="width: 40px; height: 40px;">
+                    <i class="fa-brands fa-instagram fs-5"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/lagom-vietnam" 
+                   class="d-flex align-items-center justify-content-center bg-primary text-decoration-none text-white rounded-circle mx-2"
+                   style="width: 40px; height: 40px;">
+                    <i class="fa-brands fa-linkedin-in fs-5"></i>
+                </a>
+                <a href="https://www.tiktok.com/@lagomvietnamcompany?_t=8o0NPcqFpZ7&_r=1" 
+                   class="d-flex align-items-center justify-content-center bg-dark text-decoration-none text-white rounded-circle mx-2"
+                   style="width: 40px; height: 40px;">
+                    <i class="fa-brands fa-tiktok fs-5"></i>
+                </a>
+            </ul>
+        </div>            
+    </div>
+</div>
+  
+  <div class="bg-white pt-5 pb-4">
+    <div class="container text-center text-md-start">
+        <div class="row">
+          <div class="col-md-4 col-lg-4 col-xl-6 mx-auto mb-4">
+            <img src="../image/logo.png" class="w-75">
+            <p><b>Trang web chính thức thuộc CÔNG TY CỔ PHẦN LAGOM VIỆT NAM</b></p>
+            <p>
+                <i class="fas fa-map-marker-alt"></i> <b>Trụ sở</b>: 135/37/31 Nguyễn Hữu Cảnh, Phường 22, Quận Bình Thạnh, TP. Hồ Chí Minh
+            </p>
+            <p>
+              <i class="fa fa-barcode"></i> <b>Mã số doanh nghiệp</b>: 0315495772 do Sở kế hoạch và Đầu tư Thành phố Hồ Chí Minh cấp lần đầu ngày 24 tháng 01 năm 2019
+            </p>
+            <p>
+              <i class="fa fa-briefcase"></i> <b>Lĩnh vực hoạt động chính</b>: Thu gom, tái chế
+            </p>
+            <p>
+                <i class="fas fa-envelope"></i> <b>Email</b>: <a href="mailto:service@lagomvietnam.org" class="text-decoration-none text-dark">service@lagomvietnam.org</a>
+            </p>
+            <p>
+                <i class="fas fa-phone"></i> <b>Hotline</b>: 0828 180 081
+            </p>
+        </div>
+
+         <div class="col-md-2 col-lg-3 mx-auto mb-4 mt-5">
+                  <h6 class="text-uppercase fw-bold mb-4">Giới thiệu</h6>
+                  <p><a href="aboutus.html" class="text-dark text-decoration-none">Về Lagom Việt Nam</a></p>
+                  <p><a href="quytrinhsanxuat.html" class="text-dark text-decoration-none">Quy trình sản xuất</a></p>
+                  <p><a href="doitac.html" class="text-dark text-decoration-none">Thông tin dành cho đối tác</a></p>
+                  <p><a href="tintuc.html" class="text-dark text-decoration-none">Tin tức, sự kiện</a></p>
+              </div>
+
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-3 mt-5">
+              <h6 class="text-uppercase fw-bold mb-4">Hỗ trợ khách hàng</h6>
+              <p><a href="security.html" class="text-reset text-decoration-none">Chính sách bảo mật</a></p> 
+              <p><a href="transport.html" class="text-reset text-decoration-none">Chính sách vận chuyển</a></p> <!-- Link to the new page -->
+              <p><a href="refund.html" class="text-reset text-decoration-none">Chính sách đổi trả, hoàn tiền</a></p>
+              <p><a href="billing.html" class="text-reset text-decoration-none">Chính sách thanh toán</a></p>
+          </div>
+            </div>
+        </div>
+        <div class="last-footer text-center border-top pt-3 d-flex justify-content-center mb-0">
+          <p class="text-secondary mb-0">Copyright &copy;2024&nbsp;</p><strong> Lagom Việt Nam.</strong>
+      </div>
+  </div>
+
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    </body>
+</html>

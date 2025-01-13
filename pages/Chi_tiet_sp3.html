@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Eco pot H13 Chậu cây trái tim tái chế 100% từ vỏ hộp sữa – chiếc</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/3192225934.js" crossorigin="anonymous"></script>
+  <style>
+    .dropdown-menu {
+        display: none;
+    }
+    .nav-item:hover .dropdown-menu {
+        display: block; 
+    }
+    .dropdown-menu .dropdown-item:hover{
+        color: #17a2b8;
+        background-color: transparent;
+    }
+    .custom-hover:hover, .custom-hover.active{
+        text-decoration: underline;
+        text-decoration-color: #17a2b8; 
+        text-decoration-thickness: 2px;
+        color: #6c757d !important; 
+    }
+</style>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var currentPage = window.location.href;
+        var menuLinks = document.querySelectorAll(".nav-link");
+        menuLinks.forEach(function (link) {
+            if (currentPage.includes(link.getAttribute("href")) && link.getAttribute("href") !== "#") {
+                link.classList.add("active"); 
+            }
+        });
+    });
+</script>
+</head>
+<body>
+    <header>
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-3 py-3">
+                    <img src="../image/logo.svg" alt="logo">
+                </div>
+                <div class="col-md-3 py-3"></div>
+                <div class="col-md-5 py-3">
+                    <div class="input-group">
+                        <input type="text" class="form-control col-8 border rounded-0" placeholder="Tìm sản phẩm">
+                        <select class="form-select col-2 border rounded-0 ">
+                            <option value="default">Danh mục</option>
+                            <option value="sp">Hàng gia dụng</option>
+                            <option value="sp">HOME DECOR</option>
+                        </select>
+                        <button class="btn btn-outline-secondary border rounded-0" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                      </div>                   
+                </div>
+                <div class="col-md-1 d-flex align-items-center justify-content-center">
+                    <a href="giohang.html" class="position-relative"> <i class="fa-solid fa-cart-shopping fa-lg text-secondary"></i> 
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info p-1 ">
+                          0
+                        </span>
+                      </button>
+                    </a>
+                    <p class="text-secondary p-1 m-2">0₫</p>
+                </div>
+            </div>
+        </div>
+    <section class="mainmenu border rounded-0 ">
+        <div class="container">
+            <nav class="navbar navbar-expand-sm justify-content-center">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link custom-hover text-dark" href="trangchu.html" onclick="setActive(this)">TRANG CHỦ</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link custom-hover dropdown-toggle text-dark" href="aboutus.html" onclick="setActive(this)" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        GIỚI THIỆU
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item" href="aboutus.html">Về Lagom Việt Nam</a></li>
+                        <li><a class="dropdown-item" href="quytrinhsanxuat.html">Quy trình sản xuất</a></li>
+                        <li><a class="dropdown-item" href="doitac.html">Thông tin dành cho đối tác</a></li>
+                        <li><a class="dropdown-item" href="tintuc.html">Tin tức, sự kiện</a></li>
+                    </ul>
+                </li>
+                  <li class="nav-item">
+                    <a class="nav-link custom-hover text-dark" href="sanpham.html" onclick="setActive(this)">SẢN PHẨM</a>
+                  </li>
+                  <li class="nav-item custom-hover">
+                    <a class="nav-link custom-hover text-dark" href="blog.html" onclick="setActive(this)">BLOG</a>
+                  </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+    </header>
+    <main>
+      <section class="container my-5">
+        <div class="row">
+          <!-- Cột 1: Hình ảnh -->
+          <div class="col-md-6 d-flex">
+            <!-- Danh sách thumbnail -->
+            <div class="d-flex flex-column align-items-center me-3">
+              <button id="arrowUp" class="btn btn-light mb-2">&#9650;</button>
+              <div class="thumbnail-list">
+                <img class="thumbnail my-2 img-fluid" src="../image/3.png" alt="Image 1" onclick="changeImage(this)" data-large="../image/3.png">
+                <img class="thumbnail my-2 img-fluid" src="../image/C7.png" alt="Image 2" onclick="changeImage(this)" data-large="../image/C7.png">
+                <img class="thumbnail my-2 img-fluid" src="../image/C8.png" alt="Image 3" onclick="changeImage(this)" data-large="../image/C8.png">
+                <img class="thumbnail my-2 img-fluid" src="../image/C9.png" alt="Image 4" onclick="changeImage(this)" data-large="../image/C9.png">
+              </div>
+              <button id="arrowDown" class="btn btn-light mt-2">&#9660;</button>
+            </div>
+      
+            <!-- Hình ảnh chính -->
+            <div class="col-md-10 text-right">
+              <img id="mainImage" class="img-fluid" src="../image/3.png" alt="Main Image">
+          </div>
+
+          <!-- Bootstrap Bundle with Popper -->
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+          
+          <script>
+              const thumbnails = document.querySelectorAll('.thumbnail');
+              const mainImage = document.getElementById('mainImage');
+              const thumbnailContainer = document.querySelector('.thumbnail-list');
+              let activeIndex = 0;
+      
+              // Function to change the main image
+              function changeImage(element) {
+                  thumbnails.forEach(thumb => thumb.classList.remove('active-thumbnail'));
+                  element.classList.add('active-thumbnail');
+                  mainImage.src = element.getAttribute('data-large');
+              }
+      
+              // Add click event listeners for arrows
+              document.getElementById('arrowUp').addEventListener('click', () => {
+                  if (activeIndex > 0) {
+                      activeIndex--;
+                      thumbnails[activeIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                  }
+              });
+      
+              document.getElementById('arrowDown').addEventListener('click', () => {
+                  if (activeIndex < thumbnails.length - 1) {
+                      activeIndex++;
+                      thumbnails[activeIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                  }
+              });
+      
+              // Set the first thumbnail as active by default
+              thumbnails[0].classList.add('active-thumbnail');
+          </script> 
+        </div>
+
+      
+          <!-- Cột 2: Thông tin sản phẩm -->
+          <div class="col-md-6">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a class="text-decoration-none text-secondary" href="trangchu.html">Home</a></li>
+                <li class="breadcrumb-item active text-dark" aria-current="page"><a class="text-decoration-none text-secondary" href="hd.html">HOME DECOR</li></a>
+                <li class="breadcrumb-item active text-dark" aria-current="page">Eco pot H13 Chậu cây trái tim tái chế 100% từ vỏ hộp sữa – chiếc</li>
+              </ol>
+            </nav>
+            <h1 class="fw-bold">Eco pot H13 Chậu cây trái tim tái chế 100% từ vỏ hộp sữa – chiếc</h1>
+            <h2 class="text-success">15.000 ₫ – 250.000 ₫</h2>
+            <p class="text-muted">Chậu cây tái chế bền đẹp, an toàn và thân thiện với môi trường.</p>
+      
+            <div class="mt-4">
+              <div class="mb-3">
+                <label for="color-select" class="form-label fw-bold">MÀU SẮC:</label>
+                <select id="color-select" class="form-select">
+                  <option selected>Choose an option</option>
+                  <option value="gray">Xám</option>
+                  <option value="blue">Xanh dương</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="quantity-select" class="form-label fw-bold">SỐ LƯỢNG:</label>
+                <select id="quantity-select" class="form-select">
+                  <option selected>Choose an option</option>
+                  <option value="1">1 chiếc</option>
+                  <option value="5">5 chiếc</option>
+                  <option value="20">20 chiếc</option>
+                  <option value="30">30 chiếc</option>
+                </select>
+              </div>
+              <div class="d-flex align-items-center">
+                <button class="btn btn-outline-secondary me-2" onclick="decreaseQuantity()">-</button>
+                <input type="number" id="quantity-input" class="form-control text-center" value="1" min="1" style="width: 70px;">
+                <button class="btn btn-outline-secondary ms-2" onclick="increaseQuantity()">+</button>
+                <button class="btn btn-success ms-3">ADD TO CART</button>
+              </div>
+            </div>
+      
+            <p class="mt-3"><strong>SKU:</strong> CTT13NB1Master</p>
+            <p><strong>Category:</strong> HOME DECOR</p>
+      
+            <div class="mt-3">
+              <strong>Share:</strong>
+              <a href="https://www.facebook.com" target="_blank" class="ms-2">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" width="24">
+              </a>
+              <a href="https://www.linkedin.com" target="_blank" class="ms-2">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" width="24">
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+              <!-- Thông tin chi tiết-->
+              <section class="container my-5">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="description-tab" data-bs-toggle="tab" data-bs-target="#description" type="button" role="tab">
+                      DESCRIPTION
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="additional-information-tab" data-bs-toggle="tab" data-bs-target="#additional-information" type="button" role="tab">
+                        ADDITIONAL INFORMATION
+                    </button>
+                  </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                  <div class="tab-pane fade show active p-3" id="description" role="tabpanel">
+                    <p>Chậu trồng cây trái tim Eco Pot H13 được tái chế từ 26 vỏ hộp sữa đã qua sử dụng. Là sản phẩm tái chế ra đời nhằm giải quyết các vấn đề ô nhiễm môi trường, giảm thiểu chất thải ra bãi rác chôn lấp, nâng cao nhận thức cộng đồng về bao bì đa lớp khó tái chế như vỏ hộp sữa. Hoạt động tái chế của Lagom nhằm thúc đẩy phát triển kinh tế tuần hoàn, vỏ hộp sữa được “tái sinh” và có nhiều vòng đời hơn nữa. Lagom với mô hình kinh doanh bền vững qua 4 hoạt động Giáo dục nâng cao nhận thức – Thu gom – Tái chế – Thương mại, sẽ nỗ lực để đưa các sản phẩm tái chế bền đẹp, hữu ích ra thị trường, mở ra xu hướng tiêu dùng bền vững mạnh mẽ hơn cho Việt Nam.</p>
+                       <p><strong> Mô tả </strong></p>
+                       <p><strong> Màu sắc:</strong> Sắc màu ánh kim</p>
+                       <p><strong> Kích thước: </strong>  D13xH6cm</p>
+                       <p><strong> Trọng lượng: </strong> 43g</b>
+                       <p><strong> Vật liệu: </strong> Một chậu cây tái chế từ 26 vỏ hộp sữa, chất liệu bền bỉ với môi trường, khí hậu Việt Nam </p>
+                       <p><strong> Thương hiệu:  </strong> Lagom </p>
+                       <p><strong> Xuất xứ thương hiệu: </strong>  Việt Nam </p>
+                       <p><strong> Đặc điểm nổi bật: </strong> </p>
+                       <div class="container mt-4">
+                        <ul class="list-styled">
+                          <li>Sản phẩm này có thể tái chế nhiều lần, thân thiện môi trường.</li>
+                          <li>Chất liệu dẻo dai, nhẹ nhàng, bền đẹp, dễ dàng di chuyển.</li>
+                          <li>Màu sắc ánh kim sang trọng, tối giản, dễ dàng trang trí, phù hợp với nhiều không gian văn phòng, nhà ở, quán cafe khách sạn, trung tâm thương mại…</li>
+                          <li>Bề mặt trơn dễ dàng vệ sinh.</li>
+                        </ul>
+                      </div>
+                       <p><strong> Quy trình sản xuất: </strong></p>
+                       <div class="container mt-4">
+                        <ul class="list-styled">
+                          <li>Vỏ hộp sữa đã qua sử dụng được Lagom hướng dẫn phân loại, thu gom tại nguồn.</li>
+                          <li>Tách giấy và hỗn hợp nhôm nhựa tại nhà máy giấy.</li>
+                          <li>Tạo hạt Lagom Polyalu từ hỗn hợp nhôm nhựa. </li>
+                          <li>Đổ khuôn tạo hình chậu từ hạt Lagom Polyalu kích thước, hình dáng theo yêu cầu.</li>
+                          <li>Toàn bộ quy trình không sử dụng thêm bất kì phụ gia nào.</li>
+                        </ul>
+                      </div>
+                       <p><strong> Hướng dẫn sử dụng: </strong></p>
+                       <div class="container mt-4">
+                        <ul class="list-styled">
+                            <li>Dùng làm chậu cây mini để bàn, kệ, treo ban công…</li>
+                            <li>Đáy có lỗ thoát nước, khắc phục tình trạng ngập úng cho cây, phù hợp để trồng cây nhỏ mini trang trí, để bàn làm việc, tạo dấu ấn giúp tinh thần thư thái, làm việc hiệu quả. Hoặc làm quà tặng vô cùng ý nghĩa.</li>
+                            <li>Thông tin cảnh báo: Tránh xa nguồn nhiệt trực tiếp.</li>
+                        </ul>
+                      </div>
+                       <p><strong> Giá bán:  </strong> 15.000 đ/cái</p>
+                       
+                    </div>
+                    <div class="tab-pane fade p-3" id="additional-information" role="tabpanel">  
+                     <div class="container mt-4"> 
+                        <table class="table table-bordered align-middle">
+                          <tbody>
+                            <tr>
+                              <th scope="row" class="fw-normal">Weight</th>
+                              <td>42g</td>
+                            </tr>
+                            <tr>
+                              <th scope="row" class="fw-normal">Dimensions</th>
+                              <td>N/A</td>
+                            </tr>
+                            <tr>
+                              <th scope="row" class="fw-normal">MÀU SẮC</th>
+                              <td> Xám, Xanh dương</td>
+                            </tr>
+                            <tr>
+                              <th scope="row" class="fw-normal">SỐ LƯỢNG</th>
+                              <td>1 chiếc, 5 chiếc, 20 chiếc, 30 chiếc</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      </div>
+              </section>
+              
+    </main>
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="row" style="background-image: url('../image/background.jpg'); background-position:center center;background-repeat:no-repeat;background-size:cover; height: fit-content;">
+                <div class="col-md-4 py-3"></div>
+                <div class="col-md-3 py-5 ">
+                    <h4 class="text-dark fs-3">FOLLOW LAGOM</h4> 
+                    <p class="tex m-2 fs-6">Kết nối với Lagom bạn nhé!</p> 
+                </div>
+                <div class="col-md-3 pt-5">
+                    <ul class="social d-flex align-items-center justify-content-center py-4">
+                        <a href="https://www.facebook.com/lagomvietnam.org" 
+                           class="d-flex align-items-center justify-content-center bg-primary text-white text-decoration-none rounded-circle mx-2"
+                           style="width: 40px; height: 40px;">
+                            <i class="fa-brands fa-facebook-f fs-5"></i>
+                        </a>
+                        <a href="https://www.instagram.com/lagomvietnam2023/?hl=en" 
+                           class="d-flex align-items-center justify-content-center bg-danger text-white text-decoration-none rounded-circle mx-2"
+                           style="width: 40px; height: 40px;">
+                            <i class="fa-brands fa-instagram fs-5"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/lagom-vietnam" 
+                           class="d-flex align-items-center justify-content-center bg-primary text-decoration-none text-white rounded-circle mx-2"
+                           style="width: 40px; height: 40px;">
+                            <i class="fa-brands fa-linkedin-in fs-5"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@lagomvietnamcompany?_t=8o0NPcqFpZ7&_r=1" 
+                           class="d-flex align-items-center justify-content-center bg-dark text-decoration-none text-white rounded-circle mx-2"
+                           style="width: 40px; height: 40px;">
+                            <i class="fa-brands fa-tiktok fs-5"></i>
+                        </a>
+                    </ul>
+                </div>            
+            </div>
+        </div>
+        <div class="bg-white pt-5 pb-4">
+            <div class="container-fluid">
+                <div class="row text-center text-md-start mb-4 ps-md-5">
+                    <div class="col-md-7 col-lg-6 mx-auto mb-4">
+                        <div class="mb-3">
+                            <img src="../image/logo.svg" class="w-50" alt="Lagom Vietnam Logo">
+                        </div>
+                        <p><b>Trang web chính thức thuộc CÔNG TY CỔ PHẦN LAGOM VIỆT NAM</b></p>
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i> <b>Trụ sở</b>: 135/37/31 Nguyễn Hữu Cảnh, Phường 22, Quận Bình Thạnh, TP. Hồ Chí Minh
+                        </p>
+                        <p>
+                            <i class="fa fa-barcode"></i> <b>Mã số doanh nghiệp</b>: 0315495772 do Sở kế hoạch và Đầu tư Thành phố Hồ Chí Minh cấp lần đầu ngày 24 tháng 01 năm 2019
+                        </p>
+                        <p>
+                            <i class="fa fa-briefcase"></i> <b>Lĩnh vực hoạt động chính</b>: Thu gom, tái chế
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope"></i> <b>Email</b>: <a href="mailto:service@lagomvietnam.org" class="text-decoration-none text-dark">service@lagomvietnam.org</a>
+                        </p>
+                        <p>
+                            <i class="fas fa-phone"></i> <b>Hotline</b>: 0828 180 081
+                        </p>
+                    </div>
+                    <div class="col-md-2 col-lg-3 mx-auto mb-4 mt-5">
+                        <h6 class="text-uppercase fw-bold mb-4">Giới thiệu</h6>
+                        <p><a href="aboutus.html" class="text-dark text-decoration-none">Về Lagom Việt Nam</a></p>
+                        <p><a href="quytrinhsanxuat.html" class="text-dark text-decoration-none">Quy trình sản xuất</a></p>
+                    <p><a href="doitac.html" class="text-dark text-decoration-none">Thông tin dành cho đối tác</a></p>
+                    <p><a href="tintuc.html" class="text-dark text-decoration-none">Tin tức, sự kiện</a></p>
+                </div>
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-3 mt-5">
+                    <h6 class="text-uppercase fw-bold mb-4">Hỗ trợ khách hàng</h6>
+                    <p><a href="security.html" class="text-reset text-decoration-none">Chính sách bảo mật</a></p> 
+                    <p><a href="transport.html" class="text-reset text-decoration-none">Chính sách vận chuyển</a></p> <!-- Link to the new page -->
+                    <p><a href="refund.html" class="text-reset text-decoration-none">Chính sách đổi trả, hoàn tiền</a></p>
+                    <p><a href="billing.html" class="text-reset text-decoration-none">Chính sách thanh toán</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="last-footer text-center border-top pt-3 d-flex justify-content-center mb-0">
+          <p class="text-secondary mb-0">Copyright &copy;2024&nbsp;</p><strong> Lagom Việt Nam.</strong>
+      </div>
+    </div>
+    </footer>      
+</body>
+</html>

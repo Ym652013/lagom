@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Blog-Lagom Việt Nam</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3192225934.js" crossorigin="anonymous"></script>
+  
+    <link rel="stylesheet" href="../style/1.css">
+</head>
+<body>
+<!-- Header -->
+<header>
+  <div class="container py-4">
+      <div class="row">
+          <div class="col-md-3 py-3">
+              <img src="../image/logo.svg" alt="logo">
+          </div>
+          <div class="col-md-3 py-3"></div>
+          <div class="col-md-5 py-3">
+              <div class="input-group">
+                  <input type="text" class="form-control col-8 border rounded-0" placeholder="Tìm sản phẩm">
+                  <select class="form-select col-2 border rounded-0 ">
+                      <option value="default">Danh mục</option>
+                      <option value="sp">Hàng gia dụng</option>
+                      <option value="sp">HOME DECOR</option>
+                  </select>
+                  <button class="btn btn-outline-secondary border rounded-0" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>                   
+          </div>
+          <div class="col-md-1 d-flex align-items-center justify-content-center">
+              <a href="giohang.html" class="position-relative"> <i class="fa-solid fa-cart-shopping fa-lg text-secondary"></i> 
+                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info p-1 ">
+                    0
+                  </span>
+                </button>
+              </a>
+              <p class="text-secondary p-1 m-2">0₫</p>
+          </div>
+      </div>
+  </div>
+<section class="mainmenu border rounded-0">
+  <div class="container">
+      <nav class="navbar navbar-expand-sm justify-content-center">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link custom-hover" href="trangchu.html" onclick="setActive(this)">TRANG CHỦ</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link custom-hover dropdown-toggle" href="aboutus.html" onclick="setActive(this)" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                  GIỚI THIỆU
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <li><a class="dropdown-item" href="aboutus.html">Về Lagom Việt Nam</a></li>
+                  <li><a class="dropdown-item" href="quytrinhsanxuat.html">Quy trình sản xuất</a></li>
+                  <li><a class="dropdown-item" href="doitac.html">Thông tin dành cho đối tác</a></li>
+                  <li><a class="dropdown-item" href="tintuc.html">Tin tức, sự kiện</a></li>
+              </ul>
+          </li>
+            <li class="nav-item">
+              <a class="nav-link custom-hover" href="sanpham.html" onclick="setActive(this)">SẢN PHẨM</a>
+            </li>
+            <li class="nav-item custom-hover">
+              <a class="nav-link custom-hover" href="blog.html" onclick="setActive(this)">BLOG</a>
+            </li>
+          </ul>
+      </nav>
+  </div>
+</section>
+</header>
+<main>
+  <section class="side bg-light py-4">
+    <div class="container">
+        <h1 class="entry-title title text-center">Blog</h1>
+    </div>
+  </section>
+    <section class="bg-white mb-3">
+      <div class="container-fluid my-5 ps-md-5">
+        <div class="row gy-4">
+  <!-- 1 -->
+          <div class="col-md-4">
+            <div class="card">
+              <a href="#" class="text-decoration-none">
+                <div class="position-relative">
+                  <img src="../image/B1.png" class="card-img-top" alt="Poly-alu">
+                  <div class="date-badge position-absolute top-0 start-0 bg-white text-center px-1 shadow-sm">
+                    <span class="fs-5 fw-bold d-block text-secondary">01</span>
+                    <span class="text-secondary fs-6">TH8</span>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="text-center mb-3">
+                    <span class="badge bg-success px-3 py-2">Sống xanh cùng LAGOM</span>
+                  </div>
+                  <h5 class="card-title text-center text-dark fs-5 fw-bold">Chuyện về chiếc mắc quần áo đầu tiên từ vỏ hộp sữa</h5>
+                  <div class="author text-center mb-3">
+                    <i class="fas fa-paperclip me-2" style="color:#9E9E9E; font-size: 18px;"></i>
+                    <span class="text-secondary">By</span>
+                    <img src="../image/logo_mini.png" class="logo_mini mx-2" alt="logos" style="width: 24px; height: 24px;">
+                    <span class="text-secondary fw-bold">Van Doan</span>
+                    <i class="fas fa-share ms-2" style="color:#9E9E9E; font-size: 18px; cursor: pointer;"></i>
+                  </div>
+                  <p class="card-text text-center fs-6 text-muted">Được tái chế từ vỏ hộp sữa, mỗi mắc quần áo của Lagom là câu chuyện đẹp về hành trình tái chế và bảo vệ môi trường, mang thương hiệu Made in Việt Nam đến với thế giới</p>
+                  <a href="#" class="btn btn-link text-success text-center d-block text-decoration-none fs-6">ĐỌC TIẾP</a>
+                </div>
+              </a>
+            </div>
+          </div>
+    
+   <!-- 2 -->     
+          <div class="col-md-4">
+            <div class="card">
+              <a href="#" class="text-decoration-none">
+                <div class="position-relative">
+                  <img src="../image/B2.png" class="card-img-top" alt="Eco Hanger">
+                  <div class="date-badge position-absolute top-0 start-0 bg-white text-center px-1 shadow-sm">
+                    <span class="fs-5 fw-bold d-block text-secondary">27</span>
+                    <span class="text-secondary fs-6">TH8</span>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="text-center mb-3">
+                    <span class="badge bg-success px-3 py-2">Sản phẩm xanh</span>
+                  </div>
+                  <h5 class="card-title text-center text-dark fs-5 fw-bold">02 lý do bạn nên dùng mắc treo quần áo sinh thái Eco Hanger</h5>
+                  <div class="author text-center mb-3">
+                    <i class="fas fa-paperclip me-2" style="color:#9E9E9E; font-size: 18px;"></i>
+                    <span class="text-secondary">By</span>
+                    <img src="../image/logo_mini.png" class="logo_mini mx-2" alt="logos" style="width: 24px; height: 24px;">
+                    <span class="text-secondary fw-bold">Vinh Do</span>
+                    <i class="fas fa-share ms-2" style="color:#9E9E9E; font-size: 18px; cursor: pointer;"></i>
+                  </div>
+                  <p class="card-text text-center fs-6 text-muted">Mắc áo sinh thái Eco Hanger là mắc áo đầu tiên trên thế giới được tái chế 100% từ vỏ hộp sữa, thân thiện với môi trường.</p>
+                  <a href="#" class="btn btn-link text-success text-center d-block text-decoration-none fs-6">ĐỌC TIẾP</a>
+                </div>
+              </a>
+            </div>
+          </div>
+    
+  <!-- 3 -->
+          <div class="col-md-4">
+            <div class="card">
+              <a href="#" class="text-decoration-none">
+                <div class="position-relative">
+                  <img src="../image/B3.png" class="card-img-top" alt="RCARD NFC">
+                  <div class="date-badge position-absolute top-0 start-0 bg-white text-center px-1 shadow-sm">
+                    <span class="fs-5 fw-bold d-block text-secondary">28</span>
+                    <span class="text-secondary fs-6">TH12</span>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="text-center mb-3">
+                    <span class="badge bg-success px-3 py-2">RCARD, Sống xanh</span>
+                  </div>
+                  <h5 class="card-title text-center text-dark fs-5 fw-bold">Hướng dẫn ghi dữ liệu cho danh thiếp RCARD từ NFC</h5>
+                  <div class="author text-center mb-3">
+                    <i class="fas fa-paperclip me-2" style="color:#9E9E9E; font-size: 18px;"></i>
+                    <span class="text-secondary">By</span>
+                    <img src="../image/logo_mini.png" class="logo_mini mx-2" alt="logos" style="width: 24px; height: 24px;">
+                    <span class="text-secondary fw-bold">Anh Duong Hai</span>
+                    <i class="fas fa-share ms-2" style="color:#9E9E9E; font-size: 18px; cursor: pointer;"></i>
+                  </div>
+                  <p class="card-text text-center fs-6 text-muted">Công nghệ NFC đã được tích hợp trên điện thoại thông minh từ lâu, được ứng dụng cho nhiều lĩnh vực.</p>
+                  <a href="#" class="btn btn-link text-success text-center d-block text-decoration-none fs-6">ĐỌC TIẾP</a>
+                </div>
+              </a>
+            </div>
+          </div>
+
+  <!-- 4 -->
+          <div class="col-md-4">
+            <div class="card">
+              <a href="#" class="text-decoration-none">
+                <div class="position-relative">
+                  <img src="../image/B4.png" class="card-img-top" alt="RCARD NFC">
+                  <div class="date-badge position-absolute top-0 start-0 bg-white text-center px-1 shadow-sm">
+                    <span class="fs-5 fw-bold d-block text-secondary">28</span>
+                    <span class="text-secondary fs-6">TH12</span>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="text-center mb-3">
+                    <span class="badge bg-success px-3 py-2">RCARD, Sản phẩm xanh</span>
+                  </div>
+                  <h5 class="card-title text-center text-dark fs-5 fw-bold">HƯỚNG DẪN THAY ĐỔI THÔNG TIN DANH THIẾP RCARD TRÊN ĐIỆN THOẠI</h5>
+                  <div class="author text-center mb-3">
+                    <i class="fas fa-paperclip me-2" style="color:#9E9E9E; font-size: 18px;"></i>
+                    <span class="text-secondary">By</span>
+                    <img src="../image/logo_mini.png" class="logo_mini mx-2" alt="logos" style="width: 24px; height: 24px;">
+                    <span class="text-secondary fw-bold">Anh Duong Hai</span>
+                    <i class="fas fa-share ms-2" style="color:#9E9E9E; font-size: 18px; cursor: pointer;"></i>
+                  </div>
+                  <p class="card-text text-center fs-6 text-muted">Danh thiếp rCard là danh thiếp thông minh tích hợp công nghệ NFC (Near Field Communication) được Lagom Việt Nam n...</p>
+                  <a href="#" class="btn btn-link text-success text-center d-block text-decoration-none fs-6">ĐỌC TIẾP</a>
+                </div>
+              </a>
+            </div>
+          </div>
+
+  <!--5 -->
+          <div class="col-md-4">
+            <div class="card">
+              <a href="#" class="text-decoration-none">
+                <div class="position-relative">
+                  <img src="../image/B5.png" class="card-img-top" alt="RCARD NFC">
+                  <div class="date-badge position-absolute top-0 start-0 bg-white text-center px-1 shadow-sm">
+                    <span class="fs-5 fw-bold d-block text-secondary">28</span>
+                    <span class="text-secondary fs-6">TH12</span>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="text-center mb-3">
+                    <span class="badge bg-success px-3 py-2">RCARD, Sống xanh</span>
+                  </div>
+                  <h5 class="card-title text-center text-dark fs-5 fw-bold">CÁCH BẬT NFC TRÊN HỆ ĐIỀU HÀNH IOS, ANDROID</h5>
+                  <div class="author text-center mb-3">
+                    <i class="fas fa-paperclip me-2" style="color:#9E9E9E; font-size: 18px;"></i>
+                    <span class="text-secondary">By</span>
+                    <img src="../image/logo_mini.png" class="logo_mini mx-2" alt="logos" style="width: 24px; height: 24px;">
+                    <span class="text-secondary fw-bold">Anh Duong Hai</span>
+                    <i class="fas fa-share ms-2" style="color:#9E9E9E; font-size: 18px; cursor: pointer;"></i>
+                  </div>
+                  <p class="card-text text-center fs-6 text-muted">NFC (Near Field Communication) là công nghệ kết nối không dây giúp truyền tải dữ liệu giữa các thiết bị một cách ...
+                    ĐỌC TIẾP</p>
+                  <a href="#" class="btn btn-link text-success text-center d-block text-decoration-none fs-6">ĐỌC TIẾP</a>
+                </div>
+              </a>
+            </div>
+          </div>
+
+  <!-- 6 -->
+          <div class="col-md-4">
+            <div class="card">
+              <a href="#" class="text-decoration-none">
+                <div class="position-relative">
+                  <img src="../image/B6.png" class="card-img-top" alt="RCARD NFC">
+                  <div class="date-badge position-absolute top-0 start-0 bg-white text-center px-1 shadow-sm">
+                    <span class="fs-5 fw-bold d-block text-secondary">28</span>
+                    <span class="text-secondary fs-6">TH12</span>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="text-center mb-3">
+                    <span class="badge bg-success px-3 py-2">RCARD, Sống xanh</span>
+                  </div>
+                  <h5 class="card-title text-center text-dark fs-5 fw-bold">RCARD LÀ GÌ? TẠI SAO NÊN SỬ DỤNG DANH THIẾP RCARD THAY DANH THIẾP GIẤY?</h5>
+                  <div class="author text-center mb-3">
+                    <i class="fas fa-paperclip me-2" style="color:#9E9E9E; font-size: 18px;"></i>
+                    <span class="text-secondary">By</span>
+                    <img src="../image/logo_mini.png" class="logo_mini mx-2" alt="logos" style="width: 24px; height: 24px;">
+                    <span class="text-secondary fw-bold">Anh Duong Hai</span>
+                    <i class="fas fa-share ms-2" style="color:#9E9E9E; font-size: 18px; cursor: pointer;"></i>
+                  </div>
+                  <p class="card-text text-center fs-6 text-muted">Trong kỷ nguyên công nghệ thông tin và chuyển đổi số không ngừng phát triển, danh thiếp giấy truyền thống dần trở...</p>
+                  <a href="#" class="btn btn-link text-success text-center d-block text-decoration-none fs-6">ĐỌC TIẾP</a>
+                </div>
+              </a>
+            </div>
+          </div>
+
+  <!-- 7 -->
+          <div class="col-md-4">
+            <div class="card">
+              <a href="#" class="text-decoration-none">
+                <div class="position-relative">
+                  <img src="../image/B7.png" class="card-img-top" alt="RCARD NFC">
+                  <div class="date-badge position-absolute top-0 start-0 bg-white text-center px-1 shadow-sm">
+                    <span class="fs-5 fw-bold d-block text-secondary">01</span>
+                    <span class="text-secondary fs-6">TH8</span>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="text-center mb-3">
+                    <span class="badge bg-success px-3 py-2">Tái chế xanh</span>
+                  </div>
+                  <h5 class="card-title text-center text-dark fs-5 fw-bold">Cuộc đời vỏ hộp sữa: Từ rác thải bị vứt bỏ đến sản phẩm tái chế mang đẳng cấp của người Việt</h5>
+                  <div class="author text-center mb-3">
+                    <i class="fas fa-paperclip me-2" style="color:#9E9E9E; font-size: 18px;"></i>
+                    <span class="text-secondary">By</span>
+                    <img src="../image/logo_mini.png" class="logo_mini mx-2" alt="logos" style="width: 24px; height: 24px;">
+                    <span class="text-secondary fw-bold">Anh Duong Hai</span>
+                    <i class="fas fa-share ms-2" style="color:#9E9E9E; font-size: 18px; cursor: pointer;"></i>
+                  </div>
+                  <p class="card-text text-center fs-6 text-muted">Trong bối cảnh môi trường ngày càng bị đe dọa bởi sự gia tăng rác thải nhựa, việc tái chế các loại vật liệu phức ...</p>
+                  <a href="#" class="btn btn-link text-success text-center d-block text-decoration-none fs-6">ĐỌC TIẾP</a>
+                </div>
+              </a>
+            </div>
+          </div>
+
+  <!-- 8 -->
+          <div class="col-md-4">
+            <div class="card">
+              <a href="#" class="text-decoration-none">
+                <div class="position-relative">
+                  <img src="../image/B8.png" class="card-img-top" alt="RCARD NFC">
+                  <div class="date-badge position-absolute top-0 start-0 bg-white text-center px-1 shadow-sm">
+                    <span class="fs-5 fw-bold d-block text-secondary">23</span>
+                    <span class="text-secondary fs-6">TH7</span>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="text-center mb-3">
+                    <span class="badge bg-success px-3 py-2">Tin tức, Sự kiện</span>
+                  </div>
+                  <h5 class="card-title text-center text-dark fs-5 fw-bold">1000 tấn vỏ hộp sữa và hành trình 5 năm đồng hành xây dựng thói quen phân loại rác cùng trẻ em Việt Nam</h5>
+                  <div class="author text-center mb-3">
+                    <i class="fas fa-paperclip me-2" style="color:#9E9E9E; font-size: 18px;"></i>
+                    <span class="text-secondary">By</span>
+                    <img src="../image/logo_mini.png" class="logo_mini mx-2" alt="logos" style="width: 24px; height: 24px;">
+                    <span class="text-secondary fw-bold">Anh Duong Hai</span>
+                    <i class="fas fa-share ms-2" style="color:#9E9E9E; font-size: 18px; cursor: pointer;"></i>
+                  </div>
+                  <p class="card-text text-center fs-6 text-muted">Trong 5 năm qu...</p>
+                  <a href="#" class="btn btn-link text-success text-center d-block text-decoration-none fs-6">ĐỌC TIẾP</a>
+                </div>
+              </a>
+            </div>
+          </div>
+  <!-- 9 -->
+
+          <div class="col-md-4">
+            <div class="card">
+              <a href="#" class="text-decoration-none">
+                <div class="position-relative">
+                  <img src="../image/B9.png" class="card-img-top" alt="RCARD NFC">
+                  <div class="date-badge position-absolute top-0 start-0 bg-white text-center px-1 shadow-sm">
+                    <span class="fs-5 fw-bold d-block text-secondary">28</span>
+                    <span class="text-secondary fs-6">TH12</span>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="text-center mb-3">
+                    <span class="badge bg-success px-3 py-2">RCARD, Sống tốt</span>
+                  </div>
+                  <h5 class="card-title text-center text-dark fs-5 fw-bold">Lagom Riders – Biệt đội thu gom bằng xe máy đầu tiên tại Việt Nam</h5>
+                  <div class="author text-center mb-3">
+                    <i class="fas fa-paperclip me-2" style="color:#9E9E9E; font-size: 18px;"></i>
+                    <span class="text-secondary">By</span>
+                    <img src="../image/logo_mini.png" class="logo_mini mx-2" alt="logos" style="width: 24px; height: 24px;">
+                    <span class="text-secondary fw-bold">Van Doan</span>
+                    <i class="fas fa-share ms-2" style="color:#9E9E9E; font-size: 18px; cursor: pointer;"></i>
+                  </div>
+                  <p class="card-text text-center fs-6 text-muted">Rác thải nhựa và vỏ hộp sữa đang trở thành vấn đề nghiêm trọng đối với môi trường . Lagom Riders - biệt đội thu g...</p>
+                  <a href="#" class="btn btn-link text-success text-center d-block text-decoration-none fs-6">ĐỌC TIẾP</a>
+                </div>
+              </a>
+            </div>
+          </div>
+
+
+          
+        </div>
+      </div>
+      <div class="container text-center mt-5">
+        <button class="btn custom-btn"style="background-color:#36f3d9;color:white; font-size: 18px;">1</button>
+        <button class="btn custom-btn">2</button>
+      </div>
+    </section>
+  
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container-fluid">
+    <div class="row" style="background-image: url('../image/background.jpg'); background-position:center center;background-repeat:no-repeat;background-size:cover; height: fit-content;">
+        <div class="col-md-4 py-3"></div>
+        <div class="col-md-3 py-5 ">
+            <h4 class="text-dark fs-3">FOLLOW LAGOM</h4> 
+            <p class="tex m-2 fs-6">Kết nối với Lagom bạn nhé!</p> 
+        </div>
+        <div class="col-md-3 pt-5">
+            <ul class="social d-flex align-items-center justify-content-center py-4">
+                <a href="https://www.facebook.com/lagomvietnam.org" 
+                   class="d-flex align-items-center justify-content-center bg-primary text-white text-decoration-none rounded-circle mx-2"
+                   style="width: 40px; height: 40px;">
+                    <i class="fa-brands fa-facebook-f fs-5"></i>
+                </a>
+                <a href="https://www.instagram.com/lagomvietnam2023/?hl=en" 
+                   class="d-flex align-items-center justify-content-center bg-danger text-white text-decoration-none rounded-circle mx-2"
+                   style="width: 40px; height: 40px;">
+                    <i class="fa-brands fa-instagram fs-5"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/lagom-vietnam" 
+                   class="d-flex align-items-center justify-content-center bg-primary text-decoration-none text-white rounded-circle mx-2"
+                   style="width: 40px; height: 40px;">
+                    <i class="fa-brands fa-linkedin-in fs-5"></i>
+                </a>
+                <a href="https://www.tiktok.com/@lagomvietnamcompany?_t=8o0NPcqFpZ7&_r=1" 
+                   class="d-flex align-items-center justify-content-center bg-dark text-decoration-none text-white rounded-circle mx-2"
+                   style="width: 40px; height: 40px;">
+                    <i class="fa-brands fa-tiktok fs-5"></i>
+                </a>
+            </ul>
+        </div>            
+    </div>
+</div>
+  <div class="bg-white pt-5 pb-4">
+    <div class="container text-center text-md-start">
+        <div class="row">
+            <div class="col-md-4 col-lg-4 col-xl-6 mx-auto mb-4">
+                <img src="../image/logo.png" class="w-75">
+                <p><b>Trang web chính thức thuộc CÔNG TY CỔ PHẦN LAGOM VIỆT NAM</b></p>
+                <p>
+                    <i class="fas fa-map-marker-alt"></i> <b>Trụ sở</b>: 135/37/31 Nguyễn Hữu Cảnh, Phường 22, Quận Bình Thạnh, TP. Hồ Chí Minh
+                </p>
+                <p>
+                  <i class="fa fa-barcode"></i> <b>Mã số doanh nghiệp</b>: 0315495772 do Sở kế hoạch và Đầu tư Thành phố Hồ Chí Minh cấp lần đầu ngày 24 tháng 01 năm 2019
+                </p>
+                <p>
+                  <i class="fa fa-briefcase"></i> <b>Lĩnh vực hoạt động chính</b>: Thu gom, tái chế
+                </p>
+                <p>
+                    <i class="fas fa-envelope"></i> <b>Email</b>: <a href="mailto:service@lagomvietnam.org" class="text-decoration-none text-dark">service@lagomvietnam.org</a>
+                </p>
+                <p>
+                    <i class="fas fa-phone"></i> <b>Hotline</b>: 0828 180 081
+                </p>
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-3 mt-5">
+                <h6 class="text-uppercase fw-bold mb-4">Giới thiệu</h6>
+                <p><a href="aboutus.html" class="text-dark text-decoration-none">Về Lagom Việt Nam</a></p>
+                <p><a href="quytrinhsanxuat.html" class="text-reset text-decoration-none">Quy trình sản xuất</a></p>
+                <p><a href="doitac.html" class="text-reset text-decoration-none">Thông tin dành cho đối tác</a></p>
+                <p><a href="tintuc.html" class="text-reset text-decoration-none">Tin tức, sự kiện</a></p>
+            </div>
+
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-3 mt-5">
+              <h6 class="text-uppercase fw-bold mb-4">Hỗ trợ khách hàng</h6>
+              <p><a href="security.html" class="text-reset text-decoration-none">Chính sách bảo mật</a></p> 
+              <p><a href="transport.html" class="text-reset text-decoration-none">Chính sách vận chuyển</a></p> <!-- Link to the new page -->
+              <p><a href="refund.html" class="text-reset text-decoration-none">Chính sách đổi trả, hoàn tiền</a></p>
+              <p><a href="billing.html" class="text-reset text-decoration-none">Chính sách thanh toán</a></p>
+          </div>
+
+        </div>
+    </div>
+    <div class="last-footer text-center border-top pt-3 d-flex justify-content-center mb-0">
+      <p class="text-secondary mb-0">Copyright &copy;2024&nbsp;</p><strong> Lagom Việt Nam.</strong>
+  </div>
+  </div>
+
+</footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+
+
+

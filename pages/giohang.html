@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>Giỏ hàng - Lagom Việt Nam</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../style/1.css">
+    <style>
+        .cart-table th, .cart-table td {
+            vertical-align: middle;
+            text-align: left;
+        }
+        .cart-table img {
+            max-width: 100px;
+        }
+        .delete-btn {
+            color: red;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+        .details-box {
+            border: 1px solid #dee2e6;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+            height: fit-content;
+        }
+        @media (max-width: 992px) {
+            .details-box {
+                margin-top: 20px;
+            }
+        }
+        .product-info {
+            text-align: left;
+        }
+        .product-info p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+        .cart-totals {
+            font-size: 1rem;
+        }
+        .cart-totals .total-label {
+            font-weight: bold;
+        }
+        .cart-totals .btn-checkout {
+            background-color: #28a745;
+            color: #fff;
+            font-size: 0.9rem;
+            width: auto;
+            padding: 0.5rem 1rem;
+            margin-top: 15px;
+            border: none;
+        }
+        /* Custom styles for coupon and update cart */
+        .coupon-section {
+            margin-top: 20px;
+        }
+        .btn-apply-coupon {
+            background-color: #28a745;
+            color: #fff;
+            height: 35px; /* Đảm bảo nút có chiều cao phù hợp */
+        }
+        .btn-update-cart {
+            background-color: #007bff;
+            color: #fff;
+            height: 35px; /* Đảm bảo nút có chiều cao phù hợp */
+        }
+        /* Tùy chỉnh chiều cao và chiều rộng của ô nhập mã giảm giá */
+        .coupon-input {
+            height: 35px; /* Giảm chiều cao */
+            width: 250px; /* Tăng chiều rộng */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-3 py-3">
+                    <a href="trangchu.html"><img src="../image/logo.svg" alt="logo" class="img-fluid"></a>
+                </div>
+                <div class="col-md-3 py-3"></div>
+                <div class="col-md-5 py-3">
+                    <div class="input-group">
+                        <input type="text" class="form-control col-8 border rounded-0" placeholder="Tìm sản phẩm">
+                        <select class="form-select col-2 border rounded-0">
+                            <option value="default">Danh mục</option>
+                            <option value="sp">Hàng gia dụng</option>
+                            <option value="sp">HOME DECOR</option>
+                        </select>
+                        <button class="btn btn-outline-secondary border rounded-0" type="button">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>                   
+                </div>
+                <div class="col-md-1 d-flex align-items-center justify-content-center">
+                    <a href="giohang.html" class="position-relative">
+                        <i class="fa-solid fa-cart-shopping fa-lg text-secondary"></i> 
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info p-1">
+                            0
+                        </span>
+                    </a>
+                    <p class="text-secondary p-1 m-2">0₫</p>
+                </div>
+            </div>
+        </div>
+        <section class="mainmenu border rounded-0">
+            <div class="container">
+                <nav class="navbar navbar-expand-sm justify-content-center">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link custom-hover text-dark" href="trangchu.html" onclick="setActive(this)">TRANG CHỦ</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link custom-hover dropdown-toggle text-dark" href="aboutus.html" onclick="setActive(this)" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                GIỚI THIỆU
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <li><a class="dropdown-item" href="aboutus.html">Về Lagom Việt Nam</a></li>
+                                <li><a class="dropdown-item" href="quytrinhsanxuat.html">Quy trình sản xuất</a></li>
+                                <li><a class="dropdown-item" href="doitac.html">Thông tin dành cho đối tác</a></li>
+                                <li><a class="dropdown-item" href="tintuc.html">Tin tức, sự kiện</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-hover text-dark" href="sanpham.html" onclick="setActive(this)">SẢN PHẨM</a>
+                        </li>
+                        <li class="nav-item custom-hover">
+                            <a class="nav-link custom-hover text-dark" href="blog.html" onclick="setActive(this)">BLOG</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section class="bg-white  ">
+          <section class="side bg-light py-2">
+        <div class="container">
+            <div class="d-flex justify-content-center align-items-center p-3 bg-light">
+                <span class="fw-bold text-dark text-decoration-underline me-3 fs-5">GIỎ HÀNG</span>                <i class="fa-solid fa-arrow-right text-muted me-3"></i>
+                <a href="thanhtoan.html" class="text-decoration-none"><span class="entry-title title text-center fw-bold me-3 text-muted fs-5">THANH TOÁN</span></a>
+                <i class="fa-solid fa-arrow-right text-muted me-3"></i>
+                <span class="text-muted fw-bold fs-5">HOÀN THÀNH ĐƠN HÀNG</span>
+            </div>
+        </div>
+    </section>   
+            <div class="container pt-5 pb-5">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="table-responsive">
+                            <table class="table cart-table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"></th>
+                                        <th scope="col"></th>
+                                        <th scope="col">PRODUCT</th>
+                                        <th scope="col">PRICE</th>
+                                        <th scope="col">QUANTITY</th>
+                                        <th scope="col">SUBTOTAL</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <span class="delete-btn" title="Xóa sản phẩm"><i class="fas fa-times"></i></span>
+                                        </td>
+                                        <td>
+                                            <img src="../image/2.png" alt="Eco pot C12">
+                                        </td>
+                                        <td class="product-info">
+                                            <strong>Eco pot C12 Chậu cây hình trụ tái chế</strong>
+                                            <p>Màu sắc: Xám</p>
+                                            <p>Số lượng: 5 chiếc</p>
+                                        </td>
+                                        <td>35.000 ₫</td>
+                                        <td>
+                                            <input type="number" min="1" value="5" class="form-control quantity-input" style="width: 80px;">
+                                        </td>
+                                        <td>175.000 ₫</td>
+                                    </tr>
+                                    <!-- Thêm các sản phẩm khác nếu cần -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- Phần nhập mã giảm giá và nút Apply coupon -->
+                        <div class="coupon-section d-flex justify-content-between align-items-center">
+                            <div class="d-flex">
+                                <input type="text" class="form-control me-2 coupon-input" placeholder="Coupom code">
+                                <button class="btn btn-apply-coupon">Apply coupon</button>
+                            </div>
+                            <button class="btn btn-update-cart">UPDATE CART</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="details-box">
+                            <h5 class="mb-4">CART TOTALS</h5>
+                            <div class="cart-totals">
+                                <div class="d-flex justify-content-between">
+                                    <p class="total-label">SUBTOTAL:</p>
+                                    <p id="subtotal">175.000 ₫</p>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <p class="total-label">SHIPPING:</p>
+                                    <p>Enter your address to view shipping options</p>
+                                    <a href="#" class="text-decoration-none">(Calculate shipping)</a>
+                                </div>
+                                <hr>
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="total-label">TOTAL:</h6>
+                                    <h6 id="total">175.000 ₫</h6>
+                                </div>
+                                <a href="thanhtoan.html" class="btn btn-checkout">PROCEED TO CHECKOUT</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </main>
+
+    <!-- Modal Chi tiết sản phẩm -->
+    <div class="modal fade" id="productDetailModal" tabindex="-1" aria-labelledby="productDetailModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="productDetailModalLabel">Chi tiết sản phẩm</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Thông tin chi tiết về sản phẩm sẽ được hiển thị ở đây.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="row" style="background-image: url('../image/background.jpg'); background-position:center center; background-repeat:no-repeat; background-size:cover; height: fit-content;">
+                <div class="col-md-4 py-3"></div>
+                <div class="col-md-3 py-5">
+                    <h4 class="text-dark fs-3">FOLLOW LAGOM</h4> 
+                    <p class="text m-2 fs-6">Kết nối với Lagom bạn nhé!</p> 
+                </div>
+                <div class="col-md-3 pt-5">
+                    <ul class="social d-flex align-items-center justify-content-center py-4">
+                        <li>
+                            <a href="https://www.facebook.com/lagomvietnam.org" 
+                               class="d-flex align-items-center justify-content-center bg-primary text-white text-decoration-none rounded-circle mx-2"
+                               style="width: 40px; height: 40px;">
+                                <i class="fa-brands fa-facebook-f fs-5"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/lagomvietnam2023/?hl=en" 
+                               class="d-flex align-items-center justify-content-center bg-danger text-white text-decoration-none rounded-circle mx-2"
+                               style="width: 40px; height: 40px;">
+                                <i class="fa-brands fa-instagram fs-5"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/company/lagom-vietnam" 
+                               class="d-flex align-items-center justify-content-center bg-primary text-decoration-none text-white rounded-circle mx-2"
+                               style="width: 40px; height: 40px;">
+                                <i class="fa-brands fa-linkedin-in fs-5"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.tiktok.com/@lagomvietnamcompany?_t=8o0NPcqFpZ7&_r=1" 
+                               class="d-flex align-items-center justify-content-center bg-dark text-decoration-none text-white rounded-circle mx-2"
+                               style="width: 40px; height: 40px;">
+                                <i class="fa-brands fa-tiktok fs-5"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>            
+            </div>
+        </div>
+        <div class="bg-white pt-5 pb-4">
+            <div class="container text-center text-md-start">
+                <div class="row">
+                    <div class="col-md-4 col-lg-4 col-xl-6 mx-auto mb-4">
+                        <img src="../image/logo.png" class="w-75" alt="Logo Lagom">
+                        <p><b>Trang web chính thức thuộc CÔNG TY CỔ PHẦN LAGOM VIỆT NAM</b></p>
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i> <b>Trụ sở</b>: 135/37/31 Nguyễn Hữu Cảnh, Phường 22, Quận Bình Thạnh, TP. Hồ Chí Minh
+                        </p>
+                        <p>
+                            <i class="fa fa-barcode"></i> <b>Mã số doanh nghiệp</b>: 0315495772 do Sở kế hoạch và Đầu tư Thành phố Hồ Chí Minh cấp lần đầu ngày 24 tháng 01 năm 2019
+                        </p>
+                        <p>
+                            <i class="fa fa-briefcase"></i> <b>Lĩnh vực hoạt động chính</b>: Thu gom, tái chế
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope"></i> <b>Email</b>: <a href="mailto:service@lagomvietnam.org" class="text-decoration-none text-dark">service@lagomvietnam.org</a>
+                        </p>
+                        <p>
+                            <i class="fas fa-phone"></i> <b>Hotline</b>: 0828 180 081
+                        </p>
+                    </div>
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-3 mt-5">
+                        <h6 class="text-uppercase fw-bold mb-4">Giới thiệu</h6>
+                        <p><a href="aboutus.html" class="text-dark text-decoration-none">Về Lagom Việt Nam</a></p>
+                        <p><a href="quytrinhsanxuat.html" class="text-reset text-decoration-none">Quy trình sản xuất</a></p>
+                        <p><a href="doitac.html" class="text-reset text-decoration-none">Thông tin dành cho đối tác</a></p>
+                        <p><a href="tintuc.html" class="text-reset text-decoration-none">Tin tức, sự kiện</a></p>
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-3 mt-5">
+                        <h6 class="text-uppercase fw-bold mb-4">Hỗ trợ khách hàng</h6>
+                        <p><a href="security.html" class="text-reset text-decoration-none">Chính sách bảo mật</a></p> 
+                        <p><a href="transport.html" class="text-reset text-decoration-none">Chính sách vận chuyển</a></p>
+                        <p><a href="refund.html" class="text-reset text-decoration-none">Chính sách đổi trả, hoàn tiền</a></p>
+                        <p><a href="billing.html" class="text-reset text-decoration-none">Chính sách thanh toán</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Chi tiết sản phẩm -->
+    <div class="modal fade" id="productDetailModal" tabindex="-1" aria-labelledby="productDetailModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="productDetailModalLabel">Chi tiết sản phẩm</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Thông tin chi tiết về sản phẩm sẽ được hiển thị ở đây.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        document.querySelectorAll('.quantity-input').forEach(input => {
+            input.addEventListener('change', updateTotal);
+        });
+
+        function updateTotal() {
+            let subtotal = 0;
+            document.querySelectorAll('.cart-table tbody tr').forEach(row => {
+                const priceText = row.children[3].textContent.trim();
+                const price = parseInt(priceText.replace(/\./g, '').replace('₫', ''));
+                const quantity = parseInt(row.querySelector('.quantity-input').value);
+                const totalPrice = price * quantity;
+                row.children[5].textContent = formatCurrency(totalPrice);
+                subtotal += totalPrice;
+                const productInfo = row.querySelector('.product-info');
+                if (productInfo) {
+                    const quantityPara = productInfo.querySelector('p:nth-child(3)');
+                    if (quantityPara) {
+                        quantityPara.textContent = `Số lượng: ${quantity} chiếc`;
+                    }
+                }
+            });
+            document.getElementById('subtotal').textContent = formatCurrency(subtotal);
+            document.getElementById('total').textContent = formatCurrency(subtotal);
+        }
+
+        function formatCurrency(value) {
+            return value.toLocaleString('vi-VN') + ' ₫';
+        }
+
+        document.querySelectorAll('.delete-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                if(confirm('Bạn có chắc chắn muốn xóa sản phẩm này khỏi giỏ hàng?')) {
+                    const row = this.closest('tr');
+                    row.remove();
+                    updateTotal();
+                }
+            });
+        });
+
+        document.querySelectorAll('.details-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const row = this.closest('tr');
+                const productName = row.querySelector('.product-info strong').textContent.trim();
+                const productPrice = row.children[3].textContent.trim();
+                const productQuantity = row.querySelector('.quantity-input').value;
+                const productColor = row.querySelector('.product-info p:nth-child(2)').textContent.trim().split(': ')[1];
+                const productTotal = row.children[5].textContent.trim();
+                document.getElementById('productDetailModalLabel').textContent = productName;
+                document.querySelector('#productDetailModal .modal-body').innerHTML = `
+                    <p><strong>Giá:</strong> ${productPrice}</p>
+                    <p><strong>Màu sắc:</strong> ${productColor}</p>
+                    <p><strong>Số lượng:</strong> ${productQuantity} chiếc</p>
+                    <p><strong>Thành tiền:</strong> ${productTotal}</p>
+                `;
+                var productDetailModal = new bootstrap.Modal(document.getElementById('productDetailModal'));
+                productDetailModal.show();
+            });
+        });
+
+        // Thêm sự kiện cho nút Update Cart
+        document.querySelector('.btn-update-cart').addEventListener('click', function() {
+            updateTotal();
+            alert('Giỏ hàng đã được cập nhật.');
+        });
+
+        // Thêm sự kiện cho nút Apply coupon (Chưa xử lý logic giảm giá)
+        document.querySelector('.btn-apply-coupon').addEventListener('click', function() {
+            const couponCode = this.previousElementSibling.value.trim();
+            if(couponCode === "") {
+                alert('Vui lòng nhập mã giảm giá.');
+                return;
+            }
+            // TODO: Xử lý logic áp dụng mã giảm giá
+            alert(`Mã giảm giá "${couponCode}" đã được áp dụng.`);
+        });
+
+        window.onload = updateTotal;
+    </script>
+</body>
+</html>
